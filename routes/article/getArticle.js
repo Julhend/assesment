@@ -8,7 +8,7 @@ app.get("/article", async (req, res, next) => {
       where: req.query,
     });
     if (!article.length) {
-      res.send("article not found");
+      res.status(404).send("article not found");
     } else {
       res.status(200).send(article);
     }

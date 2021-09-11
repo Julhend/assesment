@@ -4,6 +4,10 @@ API for Assessment SEBISedu using Node.js and MySQL with sequelize ORM
 Assessment API is API for create , read, update and delete (CRUD) an Article. Before creating an article user must register first, if user is registered user can login using email and password to get authorized and can use the routes that has been provided. Using Passport (https://www.npmjs.com/package/passport) for Authentication Middleware, and Using Jsonwebtoken (https://www.npmjs.com/package/jsonwebtoken) for generating token that use for User Authentication. Assessment API also has upload picture feature using Multer (https://www.npmjs.com/package/multer).
 For complete information about what libraries or dependencies that use for this API, please open the file package.json
 
+```
+API DOCUMENTATION : https://documenter.getpostman.com/view/13000455/U16kqk2Z#d6d38248-a391-4627-86c1-160a326079d7
+```
+
 ## Environment variables
 
 ```

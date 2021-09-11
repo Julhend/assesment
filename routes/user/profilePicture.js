@@ -25,6 +25,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 const passport = require("../../middleware/authorizationMiddleware");
 const HOSTNAME = process.env.HOST;
+
 app.post("/users/picture", upload.single("file"), passport.authenticate("bearer", { session: false }), async (req, res) => {
   const fileName = `${HOSTNAME}/files/${req.file.originalname.replace(" ", "%20")}`;
   await db.users.update(

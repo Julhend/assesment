@@ -13,7 +13,7 @@ app.patch("/article/:id/edit", passport.authenticate("bearer", { session: false 
       },
     });
     if (!article.length) {
-      res.send("article not found or you can't edit this article");
+      res.status(400).send("article not found or you can't edit this article");
     } else {
       const result = await db.articles.update(body, {
         where: {

@@ -12,7 +12,7 @@ app.delete("/article/:id/delete", passport.authenticate("bearer", { session: fal
       },
     });
     if (!article.length) {
-      res.send("article not found or you can't delete this article");
+      res.status(400).send("article not found or you can't delete this article");
     } else {
       const result = await db.articles.destroy({
         where: {
@@ -24,7 +24,7 @@ app.delete("/article/:id/delete", passport.authenticate("bearer", { session: fal
       if (result == 1) {
         res.status(200).send("Article Deleted");
       } else {
-        res.send("Delete Failed");
+        res.status(400).send("Delete Failed");
       }
     }
   } catch (error) {

@@ -36,7 +36,7 @@ app.post("/article/:id/picture", upload.single("file"), passport.authenticate("b
   });
 
   if (!article) {
-    res.send("article not found");
+    res.status(400).send("article not found");
   } else {
     await db.articles.update(
       {

@@ -12,7 +12,7 @@ app.delete("/comment/:id/delete", passport.authenticate("bearer", { session: fal
       },
     });
     if (!comment.length) {
-      res.send("comment not found or you can't delete this comment");
+      res.status(400).send("comment not found or you can't delete this comment");
     } else {
       const result = await db.comments.destroy({
         where: {
