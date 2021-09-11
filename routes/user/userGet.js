@@ -4,19 +4,8 @@ const db = require("../../models");
 
 app.get("/users", async (req, res, next) => {
   try {
-    let user = await db.users.findAll({});
-    return res.status(200).send(user);
-  } catch (err) {
-    next(err);
-  }
-});
-
-app.get("/users/:id", async (req, res, next) => {
-  try {
     let user = await db.users.findAll({
-      where: {
-        id: req.params.id,
-      },
+      where: req.query,
     });
 
     if (user.length == 1) {

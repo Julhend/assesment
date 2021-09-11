@@ -17,7 +17,7 @@ module.exports = {
       },
       picture: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       userId: {
         type: Sequelize.UUID,
