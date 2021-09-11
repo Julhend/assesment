@@ -5,7 +5,7 @@ Assessment API is API for create , read, update and delete (CRUD) an Article. Be
 For complete information about what libraries or dependencies that use for this API, please open the file package.json
 
 ```
-API DOCUMENTATION : https://documenter.getpostman.com/view/13000455/U16kqk2Z#d6d38248-a391-4627-86c1-160a326079d7
+API DOCUMENTATION : (https://documenter.getpostman.com/view/13000455/U16kqk2Z#d6d38248-a391-4627-86c1-160a326079d7)
 ```
 
 ## Environment variables
